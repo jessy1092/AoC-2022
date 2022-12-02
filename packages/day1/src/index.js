@@ -6,14 +6,15 @@ try {
 
 	const contents = data.split('\n');
 
-	let max = 0;
+	let maxThree = [];
 	let calories = 0;
 
 	contents.forEach(content => {
 		const num = parseInt(content);
 
 		if (isNaN(num)) {
-			max = max > calories ? max : calories;
+			maxThree = [...maxThree, calories].sort((a, b) => b - a).slice(0, 3);
+			// max = max > calories ? max : calories;
 
 			calories = 0;
 		} else {
@@ -21,9 +22,14 @@ try {
 		}
 	});
 
-	max = max > calories ? max : calories;
+	maxThree = [...maxThree, calories].sort((a, b) => b - a).slice(0, 3);
 
-	console.log(max);
+	console.log('Max', maxThree[0]);
+
+	console.log(
+		'Top three total',
+		maxThree.reduce((p, c) => p + c, 0),
+	);
 } catch (err) {
 	console.error(err);
 }
