@@ -1,0 +1,10 @@
+{
+	"name": "@aoc-2022/day8",
+	"version": "0.1.0",
+	"type": "module",
+	"packageManager": "yarn@3.3.0",
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "echo \"Warning: no test specified\" && exit 0"
+	}
+}
