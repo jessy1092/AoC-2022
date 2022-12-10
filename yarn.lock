@@ -52,6 +52,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@aoc-2022/day9@workspace:packages/day9":
+  version: 0.0.0-use.local
+  resolution: "@aoc-2022/day9@workspace:packages/day9"
+  languageName: unknown
+  linkType: soft
+
 "aoc-2022@workspace:.":
   version: 0.0.0-use.local
   resolution: "aoc-2022@workspace:."
